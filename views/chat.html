@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block head %}
+
+<style>
+  html, body {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+  }
+  .chat-container, .members {
+    min-height: 20rem;
+    overflow-y: scroll;
+  }
+  #chat-box {
+    width: 90%;
+  }
+  .send {
+    width: 90%;
+  }
+  #member-list {
+    list-style: none;
+  }
+</style>
+
+{% endblock %}
+{% block content %}
+
+<div class="row h-100">
+  <div class="col-sm-12 my-auto">
+  <h1 class="display-4 pb-2">Chatroom</h1>
+    <div class="col-sm-12 my-auto">
+      <div class="row">
+        <div id="chat-box" class="chat-container border rounded-top p-2 border-bottom-0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="send">
+          <div class="input-group">
+            <input type="text" id="send_message" class="form-control" onkeypress="sendMessage_enter(event)">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block foot %}
+<script>
+var username = '{{ username }}';
+</script>
+<script src="/socket-io/socket.io.js"></script>
+<script src="main.js"></script>
+
+
+{% endblock %}

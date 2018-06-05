@@ -1,0 +1,27 @@
+{
+  "name": "socket-chat",
+  "version": "1.0.0",
+  "description": "Basic web chat application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydXmas/socket-chat.git"
+  },
+  "author": "Noel Honeybourne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lloydXmas/socket-chat/issues"
+  },
+  "homepage": "https://github.com/lloydXmas/socket-chat#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "nodemon": "^1.17.5",
+    "nunjucks": "^3.1.3",
+    "socket.io": "^2.1.1"
+  }
+}
